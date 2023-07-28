@@ -4,7 +4,7 @@ import c from'./Newsfeed.module.css'
 
 const Newsfeed = () => {
     return (
-        <div className={c.newsfeed}>
+        <div>
 News News News
             News
         </div>

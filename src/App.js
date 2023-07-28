@@ -16,13 +16,15 @@ const App = () => {
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
-                <Switch>
-                    <Route path='/profile'><Profile /></Route>
-                    <Route path='/dialogs'><Dialogs /></Route>
-                    <Route path='/newsfeed'><Newsfeed /></Route>
-                    <Route path='/music'><Music /></Route>
-                    <Route path='/settings'><Settings /></Route>
-                </Switch>
+                <div className="app-wrapper-content">
+                    <Switch>
+                        <Route path='/profile'><Profile/></Route>
+                        <Route path='/dialogs'><Dialogs/></Route>
+                        <Route path='/newsfeed'><Newsfeed/></Route>
+                        <Route path='/music'><Music/></Route>
+                        <Route path='/settings'><Settings/></Route>
+                    </Switch>
+                </div>
             </div>
         </BrowserRouter>
     );

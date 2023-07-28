@@ -1,9 +1,4 @@
-.profile {
-    background: lightsalmon;
-    grid-area: c;
-}
-
-.profile img {
+img {
     width: 100%;
 }
 

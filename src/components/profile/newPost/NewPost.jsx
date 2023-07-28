@@ -4,7 +4,7 @@ import c from "./NewPost.module.css";
 
 const NewPost = () => {
     return (
-        <div className={c.newpost}>
+        <div>
             <div className={c.item}>New post</div>
             <textarea></textarea>
             <button>Add post</button>

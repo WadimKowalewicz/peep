@@ -4,7 +4,7 @@ import c from './Dialogs.module.css'
 
 const Dialogs = () => {
     return (
-        <div className={c.profile}>
+        <div>
 DialogsDialogs
             DialogsDialogs
             DialogsDialogs

@@ -1,5 +1,13 @@
 .navbar {
     background: darksalmon;
     grid-area: n;
+    padding: 20px;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.item a {
+    color: antiquewhite;
+    text-decoration: none;
 }
 

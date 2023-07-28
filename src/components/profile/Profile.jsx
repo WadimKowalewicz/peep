@@ -6,7 +6,7 @@ import NewPost from "./newPost/NewPost";
 
 const Profile = () => {
     return (
-        <div className={c.profile}>
+        <div>
             <img src='https://wallpapercave.com/wp/wp2461898.jpg'/>
             <div className={c.item}>Buzz</div>
             <NewPost />
