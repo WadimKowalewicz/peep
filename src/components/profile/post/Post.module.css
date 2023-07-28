@@ -1,0 +1,14 @@
+.post {
+    background: lightsalmon;
+    color: saddlebrown;
+}
+
+.post img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.item {
+    color: saddlebrown;
+}

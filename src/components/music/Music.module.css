@@ -1,0 +1,13 @@
+.music {
+    background: darksalmon;
+    grid-area: c;
+}
+
+.music img {
+    width: 100%;
+}
+
+/*
+.item {
+    color: mediumvioletred;
+}*/
