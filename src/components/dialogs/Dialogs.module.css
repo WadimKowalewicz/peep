@@ -1,2 +1,29 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas: 'd m';
+}
 
+.dialogsItems {
+    grid-template: 'd';
+    padding: 10px;
+}
+
+.dialogsItems .active {
+    color: red;
+}
+
+.dialog{
+    text-decoration: none;
+    color: red;
+}
+
+.messages {
+    grid-template: 'm';
+    padding: 10px;
+}
+
+.message {
+
+}
 
