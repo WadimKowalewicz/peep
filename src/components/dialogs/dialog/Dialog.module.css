@@ -1,6 +1,12 @@
-.dialog{
+.dialog a {
+    font-size: small;
     text-decoration: none;
-    color: red;
+    color: midnightblue;
 }
 
 
+.dialog img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}

@@ -2,7 +2,7 @@ import React from "react";
 import c from './Settings.module.css'
 
 
-const Settings = () => {
+const Settings = (props) => {
     return (
         <div>
 Settingsyyyy

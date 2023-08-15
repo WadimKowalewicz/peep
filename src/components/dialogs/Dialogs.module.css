@@ -9,21 +9,8 @@
     padding: 10px;
 }
 
-.dialogsItems .active {
-    color: red;
-}
-
-.dialog{
-    text-decoration: none;
-    color: red;
-}
-
 .messages {
     grid-template: 'm';
     padding: 10px;
-}
-
-.message {
-
 }
 

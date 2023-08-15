@@ -3,18 +3,21 @@ import Post from "./post/Post";
 import c from "./MyPosts.module.css"
 
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+    let postsElement = props.posts.map(p => <Post ava={p.ava} message={p.message} likesCount={p.likesCount}/>)
+
     return (
-        <div>
-            My Posts
-            <div>
+        <div className={c.myposts}>
+            <h3>My Posts</h3>
+            <div><div>
                 <textarea></textarea>
+            </div>
                 <button>Add post</button>
                 <button>Delete</button>
             </div>
-            <div className={c.myposts}>
-                <Post message="Yo!" likesCount="25"/>
-                <Post message="It's my first message!" likesCount="5"/>
+            <div>
+                {postsElement}
             </div>
         </div>
     )

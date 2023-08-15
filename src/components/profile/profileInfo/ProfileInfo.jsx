@@ -2,7 +2,7 @@ import React from "react";
 import c from './ProfileInfo.module.css'
 
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
     return (
         <div>
             <img src='https://wallpapercave.com/wp/wp2461898.jpg'/>

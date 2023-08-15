@@ -3,19 +3,19 @@ import c from './Dialogs.module.css'
 import Dialog from "./dialog/Dialog";
 import Message from "./dialog/messages/Message";
 
-const Dialogs = () => {
+
+const Dialogs = (props) => {
+    let dialogsElement = props.dialogs.map(d => <Dialog ava={d.ava} name={d.name} id={d.id}/>);
+    let messageElement = props.messages.map(m => <Message message={m.message} />);
+
+
     return (
         <div className={c.dialogs}>
             <div className={c.dialogsItems}>
-                <Dialog name='Artur' id='1'/>
-                <Dialog name='Denis' id='2'/>
-                <Dialog name='Vadim' id='3'/>
-                <Dialog name='Vladimir' id='4'/>
+                {dialogsElement}
             </div>
             <div className={c.messages}>
-                <Message message='Yo!' />
-                <Message message='Nice weather' />
-                <Message message='How are you?' />
+                {messageElement}
             </div>
         </div>
     )

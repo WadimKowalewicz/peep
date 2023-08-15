@@ -2,7 +2,7 @@ import React from "react";
 import c from'./Music.module.css'
 
 
-const Music = () => {
+const Music = (props) => {
     return (
         <div>
 Music Music
