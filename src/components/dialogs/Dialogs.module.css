@@ -11,6 +11,18 @@
 
 .messages {
     grid-template: 'm';
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: 'f s';
     padding: 10px;
 }
 
+.first {
+    grid-template: 'f';
+    padding: 10px;
+}
+
+.second {
+    grid-template: 's';
+    padding: 10px;
+}
