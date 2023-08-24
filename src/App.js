@@ -10,6 +10,7 @@ import Music from "./components/music/Music";
 import Settings from "./components/settings/Settings";
 
 
+
 const App = (props) => {
     return (
         <div className="app-wrapper">
@@ -18,11 +19,17 @@ const App = (props) => {
             <div className="app-wrapper-content">
                 <Switch>
                     <Route path='/profile' render={() => <Profile
-                        posts={props.state.profilePage.posts}/>}
+                        posts={props.state.profilePage.posts}
+                        newPostText={props.state.profilePage.newPostText}
+                        addPost={props.addPost}
+                        updateNewPostText={props.updateNewPostText}/>}
                     />
                     <Route path='/dialogs' render={() => <Dialogs
                         dialogs={props.state.dialogsPage.dialogs}
-                        messages={props.state.dialogsPage.messages}/>}
+                        messages={props.state.dialogsPage.messages}
+                        newMessageText={props.state.dialogsPage.newMessageText}
+                        addMessage={props.addMessage}
+                        updateNewMessageText={props.updateNewMessageText}/>}
                     />
                     <Route path='/newsfeed'><Newsfeed/></Route>
                     <Route path='/music'><Music/></Route>
