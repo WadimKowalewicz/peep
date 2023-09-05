@@ -4,18 +4,16 @@ import c from "./MyPosts.module.css";
 
 
 const MyPosts = (props) => {
-console.log(props)
     let postsElement = props.posts.map(p => <Post ava={p.ava} message={p.message} likesCount={p.likesCount}/>)
     let newPostElement = React.createRef();
 
-    let addPost = () => {
+    let onAddPost = () => {
         props.addPost();
-    }
+        }
 
     let onPostChange = () => {
-        let newText = newPostElement.current.value
+        let newText = newPostElement.current.value;
         props.updateNewPostText(newText);
-
     }
 
     return (
@@ -24,7 +22,7 @@ console.log(props)
             <div><div>
                 <textarea onChange={ onPostChange } value={props.newPostText} ref={newPostElement}></textarea>
             </div>
-                <button onClick={ addPost }>Add post</button>
+                <button onClick={ onAddPost }>Add post</button>
                 <button>Delete</button>
             </div>
             <div>

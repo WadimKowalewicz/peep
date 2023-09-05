@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 import Dialog from "../dialogs/dialog/Dialog";
 
 const Navbar = (props) => {
-    let sideBarElement = props.friends.map(n => <Dialog ava={n.ava} id={n.id}/>);
+    let sideBarElement = props.store.sidebar.friends.map(n => <Dialog ava={n.ava} name={n.name} id={n.id}/>);
     return (
         <div className={c.navbar}>
             <div className={c.item}><NavLink to="/profile" activeStyle={{ color: 'gold' }}>Profile</NavLink></div>
