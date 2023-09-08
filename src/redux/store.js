@@ -57,7 +57,6 @@ let store = {
                 {id: 2, message: 'Nice weather'},
                 {id: 3, message: 'How are you?'}
             ],
-            newMessageText: "Your turn..",
             newMessageBody: "",
         },
         sidebar: {
