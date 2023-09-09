@@ -13,17 +13,15 @@ import store from "./redux/reduxStore";
 const App = (props) => {
     return (
         <div className="app-wrapper">
-            <Header/>
-            <Navbar store={props.store}/>
+            <Header />
+            <Navbar />
             {/*<Navbar friends={props.state.sidebar?.friends3 ?? []}/>*/}
             <div className="app-wrapper-content">
                 <Switch>
                     <Route path='/profile'
-                           render={ () => <Profile store={props.store}
-                                                   dispatch={store.dispatch.bind(store)}/> }/>
+                           render={ () => <Profile /> }/>
                     <Route path='/dialogs'
-                           render={ () => <DialogsContainer store={props.store}
-                                                            dispatch={store.dispatch.bind(store)}/> }/>
+                           render={ () => <DialogsContainer /> }/>
                     <Route path='/newsfeed'><Newsfeed/></Route>
                     <Route path='/music'><Music/></Route>
                     <Route path='/settings'><Settings/></Route>
