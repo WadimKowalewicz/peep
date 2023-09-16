@@ -31,22 +31,27 @@ let initialState =  {
     newPostText: "try...",
 };
 
-
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_POST:
+        case ADD_POST: {
             let newPost = {
                 id: 5,
                 ava: "https://sm.ign.com/ign_ap/cover/a/avatar-gen/avatar-generations_hugw.jpg",
                 message: state.newPostText,
                 likesCount: 0
+            };
+            return {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: "try..."
             }
-            state.posts.push(newPost);
-            state.newPostText = "try...";
-            return state;
-        case UPDATE_NEW_POST_TEXT:
-            state.newPostText = action.text;
-            return state;
+    }
+        case UPDATE_NEW_POST_TEXT: {
+            return {
+                ...state,
+                newPostText: action.text
+            };
+        }
         default:
             return state;
     }
