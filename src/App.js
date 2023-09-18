@@ -9,6 +9,7 @@ import Music from "./components/music/Music";
 import Settings from "./components/settings/Settings";
 import DialogsContainer from "./components/dialogs/DialogsContainer";
 import store from "./redux/reduxStore";
+import UsersContainer from "./components/users/UsersContainer";
 
 const App = (props) => {
     return (
@@ -22,6 +23,9 @@ const App = (props) => {
                            render={ () => <Profile /> }/>
                     <Route path='/dialogs'
                            render={ () => <DialogsContainer /> }/>
+                    <Route path='/users'
+                           render={ () => <UsersContainer /> }/>
+
                     <Route path='/newsfeed'><Newsfeed/></Route>
                     <Route path='/music'><Music/></Route>
                     <Route path='/settings'><Settings/></Route>
