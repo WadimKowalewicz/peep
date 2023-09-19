@@ -8,7 +8,6 @@ import Newsfeed from "./components/newsfeed/Newsfeed";
 import Music from "./components/music/Music";
 import Settings from "./components/settings/Settings";
 import DialogsContainer from "./components/dialogs/DialogsContainer";
-import store from "./redux/reduxStore";
 import UsersContainer from "./components/users/UsersContainer";
 
 const App = (props) => {
