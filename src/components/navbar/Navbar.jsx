@@ -1,8 +1,6 @@
 import React from "react";
 import c from './Navbar.module.css'
 import {NavLink} from "react-router-dom";
-import Dialog from "../dialogs/dialog/Dialog";
-
 const Navbar = (props) => {
 /*
     let sideBarElement = props.store.sidebar.friends.map(n => <Dialog ava={n.ava} name={n.name} id={n.id}/>);
