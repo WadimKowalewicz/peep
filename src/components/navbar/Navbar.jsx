@@ -15,7 +15,7 @@ const Navbar = (props) => {
             <div className={c.item}><NavLink to="/settings" activeStyle={{ color: 'gold' }}>Settings</NavLink></div>
             <div className={c.sidebar}>
                 Friends
-
+               {/* {sideBarElement}*/}
 
 
             </div>
@@ -23,7 +23,4 @@ const Navbar = (props) => {
     )
 }
 
-/*
-{sideBarElement}
-*/
 export default Navbar;
