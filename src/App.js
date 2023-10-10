@@ -1,7 +1,6 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 import './App.css';
-import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
 import Newsfeed from "./components/newsfeed/Newsfeed";
 import Music from "./components/music/Music";
@@ -10,6 +9,7 @@ import DialogsContainer from "./components/dialogs/DialogsContainer";
 import UsersContainer from "./components/users/UsersContainer";
 import ProfileContainer from "./components/profile/ProfileContainer";
 import HeaderContainer from "./components/header/HeaderContainer";
+import Login from "./components/login/Login";
 
 const App = (props) => {
     return (
@@ -25,6 +25,8 @@ const App = (props) => {
                            render={ () => <DialogsContainer /> }/>
                     <Route path='/users'
                            render={ () => <UsersContainer /> }/>
+                    <Route path='/login'
+                           render={ () => <Login /> }/>
 
                     <Route path='/newsfeed'><Newsfeed/></Route>
                     <Route path='/music'><Music/></Route>
