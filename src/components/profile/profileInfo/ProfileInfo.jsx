@@ -1,7 +1,7 @@
 import React from "react";
 import c from './ProfileInfo.module.css'
 import Preloader from "../../common/Preloader/Preloader";
-
+import ProfileStatus from "./ProfileStatus"
 
 
 const ProfileInfo = (props) => {
@@ -10,7 +10,8 @@ const ProfileInfo = (props) => {
     }
     return (
         <div>
-            <img src='https://wallpapercave.com/wp/wp2461898.jpg'/>
+           {/* <img src='https://wallpapercave.com/wp/wp2461898.jpg'/>*/}
+            <ProfileStatus status={"jazda"}/>
             <div className={c.descriptionBlock}>
                 <img className={c.userPhoto} src={props.profile.photos.large} />
                 <div>{props.profile.fullName}</div>
