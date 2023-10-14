@@ -8,6 +8,7 @@ const Navbar = (props) => {
     return (
         <div className={c.navbar}>
             <div className={c.item}><NavLink to="/profile" activeStyle={{ color: 'gold' }}>Profile</NavLink></div>
+            <div className={c.item}><NavLink to="/login" activeStyle={{ color: 'gold' }}>Login</NavLink></div>
             <div className={c.item}><NavLink to="/dialogs" activeStyle={{ color: 'gold' }}>Messages</NavLink></div>
             <div className={c.item}><NavLink to="/users" activeStyle={{ color: 'gold' }}>Users</NavLink></div>
             <div className={c.item}><NavLink to="/newsfeed" activeStyle={{ color: 'gold' }}>Newsfeed</NavLink></div>
