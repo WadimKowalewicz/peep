@@ -1,5 +1,6 @@
 import React from "react";
 import c from './Login.module.css'
+import s from '../common/FormsControls/FormsControls.module.css'
 import {NavLink, Redirect} from "react-router-dom";
 import {Field, reduxForm} from "redux-form";
 import {Input} from "../common/FormsControls/FormsControls";
@@ -11,8 +12,7 @@ import {login} from "../../redux/authReducer";
 const maxLength50 = maxLengthCreator(50);
 
 const LoginForm = (props) => {
-    return (
-        <div>
+    return (<div>
             <form onSubmit={props.handleSubmit}>
                 <div>
                     <Field placeholder={"Email"} name={"email"} component={Input}
@@ -25,12 +25,15 @@ const LoginForm = (props) => {
                 <div>
                     <Field type={"checkbox"} name={"rememberMe"} component={Input}/> remember me
                 </div>
+                {
+                    props.error &&
+                    <div className={s.formSummaryError}>{props.error}</div>
+                }
                 <div>
                     <button>Login</button>
                 </div>
             </form>
-        </div>
-    )
+        </div>)
 }
 
 const LoginReduxForm = reduxForm({form: 'login'})(LoginForm)
@@ -41,20 +44,19 @@ const Login = (props) => {
     }
 
     if (props.isAuth) {
-        return <Redirect to={"/profile"} />
+        return <Redirect to={"/profile"}/>
     }
 
-    return (
-        <div>
+    return (<div>
             <div className={c.loginBlock}>
                 {props.isAuth ? props.login : <NavLink to={'/login'}>
                     <h1>Login</h1>
                 </NavLink>}
                 <LoginReduxForm onSubmit={onSubmit}/>
             </div>
-        </div>
-    )
+        </div>)
 }
 const mapStateToProps = (state) => ({
-    isAuth: state.auth.isAuth})
+    isAuth: state.auth.isAuth
+})
 export default connect(mapStateToProps, {login})(Login);
