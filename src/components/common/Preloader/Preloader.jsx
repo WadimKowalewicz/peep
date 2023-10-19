@@ -1,5 +1,5 @@
 import React from "react";
-import preloader from '../../../assets/images/my-loader.svg';
+import preloader from '../../../assets/images/userPhoto.png';
 import c from './Preloader.module.css'
 
 
