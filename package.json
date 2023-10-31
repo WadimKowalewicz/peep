@@ -43,5 +43,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "peep. Our Social Network.(c)",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "8.22.0"
+  },
+  "author": "",
+  "license": "ISC"
 }
