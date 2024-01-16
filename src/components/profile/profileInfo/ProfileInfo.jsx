@@ -5,22 +5,22 @@ import ProfileStatus from "./ProfileStatus"
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 
-const ProfileInfo = (props) => {
-    if(!props.profile) {
+const ProfileInfo = ({profile, status, updateStatus}) => {
+    if(!profile) {
         return <Preloader />
     }
     return (
         <div>
             <img src='https://wallpapercave.com/wp/wp2461898.jpg'/>
-            <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+            <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
             <div className={c.descriptionBlock}>
-                <img className={c.userPhoto} src={props.profile.photos.large} />
-                <div>{props.profile.fullName}</div>
-                <div>{props.profile.aboutMe}</div>
-                <a href={props.profile.contacts.twitter} target={"_blank"}>X</a>
-                {props.profile.lookingForAJob}
+                <img className={c.userPhoto} src={profile.photos.large} />
+                <div>{profile.fullName}</div>
+                <div>{profile.aboutMe}</div>
+                <a href={profile.contacts.twitter} target={"_blank"}>X</a>
+                {profile.lookingForAJob}
                 <div>I'm open for a job</div>
-                <div>{props.profile.lookingForAJobDescription}</div>
+                <div>{profile.lookingForAJobDescription}</div>
 
             </div>
         </div>
