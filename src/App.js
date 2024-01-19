@@ -13,7 +13,7 @@ import Login from "./components/login/Login";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/appReducer";
-import Preloader from "./components/common/Preloader/Preloader";
+import Preloader from "./components/common/preloader/Preloader";
 
 class App extends React.Component {
     componentDidMount() {

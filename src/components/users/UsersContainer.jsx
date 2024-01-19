@@ -7,7 +7,7 @@ import {
     unfollow
 } from "../../redux/usersReducer";
 import Users from "./Users";
-import Preloader from "../common/Preloader/Preloader";
+import Preloader from "../common/preloader/Preloader";
 import {compose} from "redux";
 import {
     getCurrentPage,

@@ -3,11 +3,11 @@ import c from './Login.module.css'
 import s from '../common/FormsControls/FormsControls.module.css'
 import {NavLink, Redirect} from "react-router-dom";
 import {Field, reduxForm} from "redux-form";
-import {Input} from "../common/FormsControls/FormsControls";
+import {Input} from "../common/formsControls/FormsControls.js";
 import {maxLengthCreator, required} from "../../utils/validators/validators";
 import {connect} from "react-redux";
 import {login} from "../../redux/authReducer";
-import {createField} from '../common/FormsControls/FormsControls.js';
+import {createField} from '../common/formsControls/FormsControls.js';
 
 
 const maxLength50 = maxLengthCreator(50);

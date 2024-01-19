@@ -3,7 +3,7 @@ import Post from "./post/Post";
 import c from "./MyPosts.module.css";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../../utils/validators/validators";
-import {Textarea} from "../../common/FormsControls/FormsControls";
+import {Textarea} from "../../common/formsControls/FormsControls";
 
 
 {/*value={props.newPostText} ref={newPostElement}*/

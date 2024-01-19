@@ -4,7 +4,7 @@ import Dialog from "./dialog/Dialog";
 import Message from "./dialog/messages/Message";
 import {Redirect} from "react-router-dom";
 import {Field, reduxForm} from "redux-form";
-import {Textarea} from "../common/FormsControls/FormsControls";
+import {Textarea} from "../common/formsControls/FormsControls";
 import {maxLengthCreator, required} from "../../utils/validators/validators";
 
 const maxLength20 = maxLengthCreator(20);
