@@ -1,6 +1,6 @@
 import React from "react";
 import c from './Login.module.css'
-import s from '../common/FormsControls/FormsControls.module.css'
+import s from '../common/formsControls/FormsControls.module.css'
 import {NavLink, Redirect} from "react-router-dom";
 import {Field, reduxForm} from "redux-form";
 import {Input} from "../common/formsControls/FormsControls.js";

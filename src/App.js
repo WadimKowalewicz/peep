@@ -1,5 +1,6 @@
 import React from "react";
-import {Route, Switch, withRouter} from "react-router-dom";
+import store from "./redux/reduxStore";
+import { Route, Switch, withRouter, BrowserRouter } from "react-router-dom";
 import './App.css';
 import Navbar from "./components/navbar/Navbar";
 import Newsfeed from "./components/newsfeed/Newsfeed";
@@ -10,9 +11,9 @@ import UsersContainer from "./components/users/UsersContainer";
 import ProfileContainer from "./components/profile/ProfileContainer";
 import HeaderContainer from "./components/header/HeaderContainer";
 import Login from "./components/login/Login";
-import {connect} from "react-redux";
-import {compose} from "redux";
-import {initializeApp} from "./redux/appReducer";
+import { Provider, connect } from "react-redux";
+import { compose } from "redux";
+import { initializeApp } from "./redux/appReducer";
 import Preloader from "./components/common/preloader/Preloader";
 
 class App extends React.Component {
@@ -21,27 +22,27 @@ class App extends React.Component {
     }
     render() {
         if (!this.props.initialized) {
-            return <Preloader/>
+            return <Preloader />
         }
         return (
             <div className="app-wrapper">
-                <HeaderContainer/>
-                <Navbar/>
+                <HeaderContainer />
+                <Navbar />
                 {/*<Navbar friends={props.state.sidebar?.friends3 ?? []}/>*/}
                 <div className="app-wrapper-content">
                     <Switch>
                         <Route path='/profile/:userId?'
-                               render={() => <ProfileContainer/>}/>
+                            render={() => <ProfileContainer />} />
                         <Route path='/dialogs'
-                               render={() => <DialogsContainer/>}/>
+                            render={() => <DialogsContainer />} />
                         <Route path='/users'
-                               render={() => <UsersContainer/>}/>
+                            render={() => <UsersContainer />} />
                         <Route path='/login'
-                               render={() => <Login/>}/>
+                            render={() => <Login />} />
 
-                        <Route path='/newsfeed'><Newsfeed/></Route>
-                        <Route path='/music'><Music/></Route>
-                        <Route path='/settings'><Settings/></Route>
+                        <Route path='/newsfeed'><Newsfeed /></Route>
+                        <Route path='/music'><Music /></Route>
+                        <Route path='/settings'><Settings /></Route>
                     </Switch>
                 </div>
             </div>
@@ -53,9 +54,17 @@ const mapStateToProps = (state) => ({
     initialized: state.app.initialized
 })
 
-/*
-export default connect(null, {getAuthUserData})(App);
-*/
-export default compose(
+let AppContainer = compose(
     withRouter,
-    connect(mapStateToProps, {initializeApp}))(App);
+    connect(mapStateToProps, { initializeApp }))(App);
+
+const PeepApp = (props) => {
+   return <BrowserRouter>
+        <Provider store={store}>
+            <AppContainer />
+        </Provider>
+    </BrowserRouter>
+}
+
+
+export default PeepApp;
