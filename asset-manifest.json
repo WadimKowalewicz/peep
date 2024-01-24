@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/peep/static/css/main.0bf9c5ea.css",
+    "main.js": "/peep/static/js/main.a05aea29.js",
+    "static/css/587.0baf5106.chunk.css": "/peep/static/css/587.0baf5106.chunk.css",
+    "static/js/587.d6150afb.chunk.js": "/peep/static/js/587.d6150afb.chunk.js",
+    "static/css/945.20394815.chunk.css": "/peep/static/css/945.20394815.chunk.css",
+    "static/js/945.70c11c28.chunk.js": "/peep/static/js/945.70c11c28.chunk.js",
+    "static/js/787.6c50ee3d.chunk.js": "/peep/static/js/787.6c50ee3d.chunk.js",
+    "index.html": "/peep/index.html",
+    "main.0bf9c5ea.css.map": "/peep/static/css/main.0bf9c5ea.css.map",
+    "main.a05aea29.js.map": "/peep/static/js/main.a05aea29.js.map",
+    "587.0baf5106.chunk.css.map": "/peep/static/css/587.0baf5106.chunk.css.map",
+    "587.d6150afb.chunk.js.map": "/peep/static/js/587.d6150afb.chunk.js.map",
+    "945.20394815.chunk.css.map": "/peep/static/css/945.20394815.chunk.css.map",
+    "945.70c11c28.chunk.js.map": "/peep/static/js/945.70c11c28.chunk.js.map",
+    "787.6c50ee3d.chunk.js.map": "/peep/static/js/787.6c50ee3d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0bf9c5ea.css",
+    "static/js/main.a05aea29.js"
+  ]
+}
