@@ -1,6 +1,6 @@
 import React from "react";
 import store from "./redux/reduxStore";
-import { Route, Switch, withRouter, BrowserRouter } from "react-router-dom";
+import { Route, Switch, withRouter, BrowserRouter, HashRouter } from "react-router-dom";
 import './App.css';
 import Navbar from "./components/navbar/Navbar";
 import Newsfeed from "./components/newsfeed/Newsfeed";
@@ -61,11 +61,13 @@ let AppContainer = compose(
     connect(mapStateToProps, { initializeApp }))(App);
 
 const PeepApp = (props) => {
-   return <BrowserRouter>
+    //<BrowserRouter basename = {process.env.PUBLIC_URL}>
+    //because of 'gh-pages we use hashrouter, but....
+   return <HashRouter>
         <Provider store={store}>
             <AppContainer />
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 
