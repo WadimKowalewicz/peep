@@ -8,6 +8,7 @@ img {
 }
 
 .userPhoto {
-    width: 30%;
-    height: 30%;
+    border-radius: 10px;
+    max-width: 100px;
+    max-height: 100px;
 }
