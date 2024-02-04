@@ -1,6 +1,6 @@
 import React from "react";
 import store from "./redux/reduxStore";
-import { Route, Switch, withRouter, BrowserRouter, HashRouter } from "react-router-dom";
+import { Route, Switch, withRouter, BrowserRouter, HashRouter, Redirect } from "react-router-dom";
 import './App.css';
 import Navbar from "./components/navbar/Navbar";
 import Newsfeed from "./components/newsfeed/Newsfeed";
@@ -19,8 +19,19 @@ const ProfileContainer = React.lazy(() => import("./components/profile/ProfileCo
 
 
 class App extends React.Component {
+    
+    catchAllUnhandledErrors = (promiseRejectionEvent) => {
+        alert("Some error occured");
+        //console.error(promiseRejectionEvent)
+    }
+    
     componentDidMount() {
         this.props.initializeApp();
+        window.addEventListener('unhandledrejection', this.catchAllUnhandledErrors);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('unhandledrejection', this.catchAllUnhandledErrors);
     }
     render() {
         if (!this.props.initialized) {
@@ -33,6 +44,7 @@ class App extends React.Component {
                 {/*<Navbar friends={props.state.sidebar?.friends3 ?? []}/>*/}
                 <div className="app-wrapper-content">
                     <Switch>
+                        <Redirect exact from="/" to="/profile" />
                         <Route path='/profile/:userId?'
                             render={withSuspense(ProfileContainer)} />
                         <Route path='/dialogs'
@@ -45,6 +57,8 @@ class App extends React.Component {
                         <Route path='/newsfeed'><Newsfeed /></Route>
                         <Route path='/music'><Music /></Route>
                         <Route path='/settings'><Settings /></Route>
+                        <Route path='*'
+                            render={() => <div>404 page not found</div>} />
                     </Switch>
                 </div>
             </div>
@@ -63,11 +77,12 @@ let AppContainer = compose(
 const PeepApp = (props) => {
     //<BrowserRouter basename = {process.env.PUBLIC_URL}>
     //because of 'gh-pages we use hashrouter, but....
-   return <HashRouter>
+    //for gh-pages: just change BrowserRouter with HashRouter
+   return <BrowserRouter>
         <Provider store={store}>
             <AppContainer />
         </Provider>
-    </HashRouter>
+    </BrowserRouter>
 }
 
 
