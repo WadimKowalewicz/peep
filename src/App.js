@@ -44,7 +44,7 @@ class App extends React.Component {
                 {/*<Navbar friends={props.state.sidebar?.friends3 ?? []}/>*/}
                 <div className="app-wrapper-content">
                     <Switch>
-                        <Redirect exact from="/" to="/profile" />
+                        <Redirect exact from="/peep" to="/profile" />
                         <Route path='/profile/:userId?'
                             render={withSuspense(ProfileContainer)} />
                         <Route path='/dialogs'
