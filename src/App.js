@@ -11,7 +11,7 @@ import HeaderContainer from "./components/header/HeaderContainer";
 import Login from "./components/login/Login";
 import { Provider, connect } from "react-redux";
 import { compose } from "redux";
-import { initializeApp } from "./redux/appReducer";
+import { initializeApp } from "./redux/appReducer.ts";
 import Preloader from "./components/common/preloader/Preloader";
 import {withSuspense as withSuspense} from "./hoc/withSuspense";
 const DialogsContainer = React.lazy(() => import("./components/dialogs/DialogsContainer"));

@@ -1,6 +1,15 @@
+type FriendsType = {
+    id: number
+    name: string
+    ava: string
+}
+
 let initialState = {
     friends: [
-        {id: 1, name: 'Artur', ava: "https://sm.ign.com/ign_ap/cover/a/avatar-gen/avatar-generations_hugw.jpg"},
+        {id: 1, 
+            name: 'Artur',
+            ava: "https://sm.ign.com/ign_ap/cover/a/avatar-gen/avatar-generations_hugw.jpg"
+        },
         {
             id: 2,
             name: 'Denis',
@@ -11,10 +20,12 @@ let initialState = {
             name: 'Vladimir',
             ava: "https://beebom.com/wp-content/uploads/2022/02/Featured.jpg?w=750&quality=75"
         }
-    ]
+    ] as Array<FriendsType>
 };
 
-const sidebarReducer = (state = initialState, action) => {
+export type InitialStateType = typeof initialState
+
+const sidebarReducer = (state = initialState, action: any):  InitialStateType => {
     return state;
 }
 

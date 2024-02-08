@@ -6,7 +6,7 @@ import {Field, reduxForm} from "redux-form";
 import {Input} from "../common/formsControls/FormsControls.js";
 import {maxLengthCreator, required} from "../../utils/validators/validators";
 import {connect} from "react-redux";
-import {login} from "../../redux/authReducer";
+import {login} from "../../redux/authReducer.ts";
 import {createField} from '../common/formsControls/FormsControls.js';
 
 
