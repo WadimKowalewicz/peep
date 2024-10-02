@@ -8,7 +8,7 @@ import {maxLengthCreator, required} from "../../utils/validators/validators";
 import {connect} from "react-redux";
 import {login} from "../../redux/authReducer.ts";
 import {createField} from '../common/formsControls/FormsControls.js';
-
+//test
 
 const maxLength50 = maxLengthCreator(50);
 
